@@ -148,7 +148,7 @@ Comparative Visualization of Model Performance on Challenging Scenes. The challe
 
 ## Leadboard
 One can find the current Talk2Car leaderboard here. The models on Talk2Car are evaluated by checking if the Intersection over Union of the predicted object bounding box and the ground truth bounding box is above 0.5.
-This metric can be referred to in many ways i.e. IoU<sub>0.5</sub>, AP50, ...
+This metric can be referred to in many ways i.e. IoU<sub>0.5</sub>, AP50.
 Pull requests with new results and models are always welcome!
 
 <div align="center">
