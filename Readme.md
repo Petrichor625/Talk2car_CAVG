@@ -175,7 +175,7 @@ Additional details about some of the baselines and state-of-the-art models menti
 
 </div>
 
-Here is where you can find the [leaderboard]([Talk2Car/leaderboard.md at master · talk2car/Talk2Car (github.com)](https://github.com/talk2car/Talk2Car/blob/master/leaderboard.md)) for the Talk2Car.
+Here is where you can find the [leaderboard](https://github.com/talk2car/Talk2Car/blob/master/leaderboard.md) for the Talk2Car.
 
 
 
