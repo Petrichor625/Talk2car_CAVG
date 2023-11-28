@@ -20,7 +20,7 @@ In the field of autonomous vehicles (AVs), accurately discerning commander inten
 
 
 ## Framework
-![image]([https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/talk2car(1)%20(2).png](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework_7%20(1).png))
+![image]([Figure/framework_7 (1).png](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework_7%20(1).png))
 The Text Encoder and the Emotion Encoder generate a text vector and an emotion vector, respectively, from the given command, while the Vision Encoder divides the input image into \(N\) RoIs, each represented by a vision vector. These vectors are contextually enriched by a context encoder and then merged by a Cross-Modal Encoder using multi-head cross-modal attention. The multimodal decoder calculates likelihood scores for each region and selects the top-\(k\) regions that best match the semantics of the command. The final prediction is based on this fusion.
 
 
