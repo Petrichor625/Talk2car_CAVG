@@ -5,7 +5,6 @@
 This repository contains the official implementation of **GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models.**
 
 
-
 ## Highlights
 
 - Developing a pioneering hybrid strategy for advanced image-text context analysis in autonomous vehicle command grounding.
@@ -20,17 +19,9 @@ This repository contains the official implementation of **GPT-4 Enhanced Multimo
 In the field of autonomous vehicles (AVs), accurately discerning commander intent and executing linguistic commands within a visual context presents a significant challenge. This paper introduces a sophisticated encoder-decoder framework, developed to address visual grounding in AVs. Our Context-Aware Visual Grounding (CAVG) model is an advanced system that integrates five core encoders—Text, Image, Context, and Cross-Modal—with a Multimodal decoder. This integration enables the CAVG model to adeptly capture contextual semantics and to learn human emotional features, augmented by state-of-the-art Large Language Models (LLMs) including GPT-4. The architecture of CAVG is reinforced by the implementation of multi-head cross-modal attention mechanisms and a Region-Specific Dynamic (RSD) layer for attention modulation. This architectural design enables the model to efficiently process and interpret a range of cross-modal inputs, yielding a comprehensive understanding of the correlation between verbal commands and corresponding visual scenes. Empirical evaluations on the Talk2Car dataset, a real-world benchmark, demonstrate that CAVG establishes new standards in prediction accuracy and operational efficiency. Notably, the model exhibits exceptional performance even with limited training data, ranging from 50% to 75% of the full dataset. This feature highlights its effectiveness and potential for deployment in practical AV applications. Moreover, CAVG has shown remarkable robustness and adaptability in challenging scenarios, including long-text command interpretation, low-light conditions, ambiguous command contexts, inclement weather conditions, and densely populated urban environments.
 
 
-
 ## Framework
 
 The Text Encoder and the Emotion Encoder generate a text vector and an emotion vector, respectively, from the given command, while the Vision Encoder divides the input image into \(N\) RoIs, each represented by a vision vector. These vectors are contextually enriched by a context encoder and then merged by a Cross-Modal Encoder using multi-head cross-modal attention. The multimodal decoder calculates likelihood scores for each region and selects the top-\(k\) regions that best match the semantics of the command. The final prediction is based on this fusion.
-
-
-
-![](.\picture\picture.jpg)
-
-
-
 
 
 ## To-do List
@@ -72,7 +63,7 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 
 **Installing Additional Requirements**: 
 
-Complete the environment setup by installing necessary packages from `requirements.txt`:
+Complete the environment setup by installing the necessary packages from `requirements.txt`:
 
 ```
 pip install -r requirements.txt
