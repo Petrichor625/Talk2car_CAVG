@@ -20,8 +20,9 @@ In the field of autonomous vehicles (AVs), accurately discerning commander inten
 
 
 ## Framework
+Schematic of the Model Architecture. The Text Encoder and the Emotion Encoder generate a text vector and an emotion vector, respectively, from the given command, while the Vision Encoder divides the input image into \(N\) RoIs, each represented by a vision vector. These vectors are contextually enriched by a context encoder and then merged by a Cross-Modal Encoder using multi-head cross-modal attention. The multimodal decoder calculates likelihood scores for each region and selects the top-\(k\) regions that best match the semantics of the command. The final prediction is based on this fusion.
 ![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework.png)
-The Text Encoder and the Emotion Encoder generate a text vector and an emotion vector, respectively, from the given command, while the Vision Encoder divides the input image into \(N\) RoIs, each represented by a vision vector. These vectors are contextually enriched by a context encoder and then merged by a Cross-Modal Encoder using multi-head cross-modal attention. The multimodal decoder calculates likelihood scores for each region and selects the top-\(k\) regions that best match the semantics of the command. The final prediction is based on this fusion.
+
 
 
 ## To-do List
@@ -147,12 +148,11 @@ Here is where you can find the [leaderboard]([Talk2Car/leaderboard.md at master 
 
 
 ## Qualitative Results
-![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/talk2car(1)%20(2).png)
 Comparative Visualization of Model Performance on the Talk2Car Dataset. Ground truth bounding boxes are depicted in blue, while output bounding boxes of CAVG are highlighted in red. A natural language command associated with each visual scenario is also displayed below the image for context.
+![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/talk2car(1)%20(2).png)
 
-
-![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/carner_case_03.png)
 Comparative Visualization of Model Performance on Challenging Scenes. The challenging scenes include those with limited visibility, ambiguous commands, and scenes with multiple agents. Ground truth bounding boxes are depicted in blue, while output bounding boxes of CAVG are highlighted in red. A natural language command associated with each visual scenario is also displayed below the image for context.
+![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/carner_case_03.png)
 
 
 
