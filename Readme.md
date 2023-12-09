@@ -180,5 +180,13 @@ Here is where you can find the [leaderboard](https://github.com/talk2car/Talk2Ca
 
 
 ## Citation
-
+**BibTex**
+```
+@article{liao2023gpt,
+  title={GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models},
+  author={Liao, Haicheng and Shen, Huanming and Li, Zhenning and Wang, Chengyue and Li, Guofa and Bie, Yiming and Xu, Chengzhong},
+  journal={arXiv preprint arXiv:2312.03543},
+  year={2023}
+}
+```
 GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models (Camera-ready)
