@@ -189,4 +189,4 @@ Here is where you can find the [leaderboard](https://github.com/talk2car/Talk2Ca
   year={2023}
 }
 ```
-GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models (Camera-ready)
+GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models  _Communications in Transportation Research_ (Camera-ready)
