@@ -1,5 +1,4 @@
-#  CAVG
-
+#  CAVG: GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models.
 ## Overview
 
 This repository contains the official implementation of **GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models.**
