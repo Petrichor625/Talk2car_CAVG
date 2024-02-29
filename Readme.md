@@ -182,11 +182,17 @@ Here is where you can find the [leaderboard](https://github.com/talk2car/Talk2Ca
 ## Citation
 **BibTex**
 ```
-@article{liao2023gpt,
-  title={GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models},
-  author={Liao, Haicheng and Shen, Huanming and Li, Zhenning and Wang, Chengyue and Li, Guofa and Bie, Yiming and Xu, Chengzhong},
-  journal={arXiv preprint arXiv:2312.03543},
-  year={2023}
+@article{LIAO2024100116,
+title = {GPT-4 enhanced multimodal grounding for autonomous driving: Leveraging cross-modal attention with large language models},
+journal = {Communications in Transportation Research},
+volume = {4},
+pages = {100116},
+year = {2024},
+issn = {2772-4247},
+doi = {https://doi.org/10.1016/j.commtr.2023.100116},
+url = {https://www.sciencedirect.com/science/article/pii/S2772424723000276},
+author = {Haicheng Liao and Huanming Shen and Zhenning Li and Chengyue Wang and Guofa Li and Yiming Bie and Chengzhong Xu},
+keywords = {Autonomous driving, Visual grounding, Cross-modal attention, Large language models, Human-machine interaction}
 }
 ```
 GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models accepted by the journal _Communications in Transportation Research_ (Camera-ready).
