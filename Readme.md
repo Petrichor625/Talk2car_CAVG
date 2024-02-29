@@ -194,4 +194,4 @@ author = {Haicheng Liao and Huanming Shen and Zhenning Li and Chengyue Wang and 
 keywords = {Autonomous driving, Visual grounding, Cross-modal attention, Large language models, Human-machine interaction}
 }
 ```
-GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models accepted by the journal _Communications in Transportation Research_ (Camera-ready).
+GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models accepted by the journal _Communications in Transportation Research_.
