@@ -1,7 +1,7 @@
 # 🚗 **CAVG: GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**
 ## 🏆 **High Impact Research**
 
-This repository contains the official implementation of **PT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**, published in the journal *Communications in Transportation Research*. 
+This repository contains the official implementation of **GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**, published in the journal *Communications in Transportation Research*. 
 
 🔥 **Essential Science Indicators High-Citation Paper** — ranked in the top **1% of most-cited papers** in the field.
 
