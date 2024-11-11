@@ -195,8 +195,8 @@ You can find the full Talk2Car leaderboard [here](https://github.com/talk2car/Ta
 
 If you find our work useful, please consider citing:
 
-``
-**BibTex**
+
+```bibtex
 @article{LIAO2024100116,
 title = {GPT-4 enhanced multimodal grounding for autonomous driving: Leveraging cross-modal attention with large language models},
 journal = {Communications in Transportation Research},
@@ -212,6 +212,7 @@ author = {Haicheng Liao and Huanming Shen and Zhenning Li and Chengyue Wang and 
 keywords = {Autonomous driving, Visual grounding, Cross-modal attention, Large language models, Human-machine interaction}
 }
 ```
+
 GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models accepted by the journal _Communications in Transportation Research_.
 Thank you for exploring CAVG! Your support and feedback are highly appreciated.
 
