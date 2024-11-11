@@ -44,8 +44,9 @@ Navigating complex commands in a visual context is a core challenge for autonomo
 - **Context Encoder & Cross-Modal Encoder**: Enrich RoIs contextually and merge using multi-head cross-modal attention.
 - **Multimodal Decoder**: Scores each region’s likelihood and selects the top-\(k\) regions matching the command semantics.
 
-![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework.png)
 
+
+<img src="https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework.png" alt="Framework Diagram" width="800"/>
 
 
 ## To-do List
@@ -54,8 +55,9 @@ Navigating complex commands in a visual context is a core challenge for autonomo
 
 - [x] [2023.10.25] Creating the repository for CVAG 
 - [x] [2023.11.05] Open source CAVG code
-- [x] [2023.11.28] Update Readme
+- [x] [2023.11.28] Update the Readme
 - [x] [2023.11.28] Update project code
+- [x] [2024.11.11] Update the Readme
 
 
 
