@@ -5,7 +5,6 @@ This repository contains the official implementation of **GPT-4 Enhanced Multimo
 
 🔥 **Essential Science Indicators High-Citation Paper** — ranked in the top **1% of most-cited papers** in the field.
 
----
 
 
 ## 📖 Overview
