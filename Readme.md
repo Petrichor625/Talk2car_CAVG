@@ -1,25 +1,42 @@
-#  CAVG: GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models.
-## Overview
+# 🚗 **CAVG: GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**
+This repository contains the official implementation of  **PT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**, published in the the journal _Communications in Transportation Research_.
 
-This repository contains the official implementation of **GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models.**
+## 📖 Overview
 
-
-## Highlights
-
-- Developing a pioneering hybrid strategy for advanced image-text context analysis in autonomous vehicle command grounding.
-- Introducing a novel cross-modal attention mechanism, uniquely tailored to derive insightful human-AV interaction from multi-modal inputs.
-- Leveraging the sophisticated capabilities of the large language model GPT-4 for effective embedding and nuanced interpretation of human emotions in commander commands.
-- Demonstrating exceptional robustness and adaptability of our model across a spectrum of challenging traffic scenarios, validated extensively on the Talk2Car dataset.
+Welcome to the official repository for **GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models**. This project introduces a novel approach using GPT-4 to enhance autonomous vehicle (AV) systems with a human-centric multimodal grounding model. The CAVG model combines text, visual, and contextual understanding for improved intent prediction in complex driving scenarios.
 
 
 
-## Abstract
+## ✨ Highlights
 
-In the field of autonomous vehicles (AVs), accurately discerning commander intent and executing linguistic commands within a visual context presents a significant challenge. This paper introduces a sophisticated encoder-decoder framework, developed to address visual grounding in AVs. Our Context-Aware Visual Grounding (CAVG) model is an advanced system that integrates five core encoders—Text, Image, Context, and Cross-Modal—with a Multimodal decoder. This integration enables the CAVG model to adeptly capture contextual semantics and to learn human emotional features, augmented by state-of-the-art Large Language Models (LLMs) including GPT-4. The architecture of CAVG is reinforced by the implementation of multi-head cross-modal attention mechanisms and a Region-Specific Dynamic (RSD) layer for attention modulation. This architectural design enables the model to efficiently process and interpret a range of cross-modal inputs, yielding a comprehensive understanding of the correlation between verbal commands and corresponding visual scenes. Empirical evaluations on the Talk2Car dataset, a real-world benchmark, demonstrate that CAVG establishes new standards in prediction accuracy and operational efficiency. Notably, the model exhibits exceptional performance even with limited training data, ranging from 50% to 75% of the full dataset. This feature highlights its effectiveness and potential for deployment in practical AV applications. Moreover, CAVG has shown remarkable robustness and adaptability in challenging scenarios, including long-text command interpretation, low-light conditions, ambiguous command contexts, inclement weather conditions, and densely populated urban environments.
+- **Hybrid Strategy for Contextual Analysis**  
+  A pioneering hybrid approach for advanced image-text context analysis tailored to autonomous vehicle command grounding.
+  
+- **Cross-Modal Attention Mechanism**  
+  A unique cross-modal attention mechanism for deriving nuanced human-AV interactions from multimodal inputs.
+
+- **Large Language Model Integration**  
+  Leverages GPT-4 for effective embedding and interpretation of emotional nuances in human commands.
+
+- **Robustness in Diverse Scenarios**  
+  Demonstrates exceptional performance across challenging traffic environments, validated extensively on the Talk2Car dataset.
 
 
-## Framework
-Schematic of the Model Architecture. The Text Encoder and the Emotion Encoder generate a text vector and an emotion vector, respectively, from the given command, while the Vision Encoder divides the input image into \(N\) RoIs, each represented by a vision vector. These vectors are contextually enriched by a context encoder and then merged by a Cross-Modal Encoder using multi-head cross-modal attention. The multimodal decoder calculates likelihood scores for each region and selects the top-\(k\) regions that best match the semantics of the command. The final prediction is based on this fusion.
+
+## 📜 Abstract
+
+Navigating complex commands in a visual context is a core challenge for autonomous vehicles (AVs). Our **Context-Aware Visual Grounding (CAVG)** model employs an advanced encoder-decoder framework to address this challenge. Integrating five specialized encoders—Text, Image, Context, Cross-Modal, and Multimodal—the CAVG model leverages GPT-4’s capabilities to capture human intent and emotional undertones. The model's architecture includes multi-head cross-modal attention and a Region-Specific Dynamic (RSD) layer for enhanced context interpretation, making it resilient across diverse and challenging real-world traffic scenarios. Evaluations on the Talk2Car dataset show that CAVG outperforms existing models in accuracy and efficiency, excelling with limited training data and proving its potential for practical AV applications.
+
+
+
+## 🧠 Framework
+
+**Model Architecture**  
+- **Text Encoder & Emotion Encoder**: Generate a text and an emotion vector from commands.
+- **Vision Encoder**: Processes images into Regions of Interest (RoIs).
+- **Context Encoder & Cross-Modal Encoder**: Enrich RoIs contextually and merge using multi-head cross-modal attention.
+- **Multimodal Decoder**: Scores each region’s likelihood and selects the top-\(k\) regions matching the command semantics.
+
 ![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/framework.png)
 
 
@@ -35,152 +52,143 @@ Schematic of the Model Architecture. The Text Encoder and the Emotion Encoder ge
 
 
 
-## Requirements
+## 🛠️ Requirements
 
 ### Environment
 
 - **Operating System**: Ubuntu 22.04
 - **CUDA Version**: 11.7
 
-### Setting Up 
+### Setup Instructions
 
-1.**Creating the Conda Environment for CAVG**: 
-
-For optimal use of the CAVG, follow these setup guidelines:
-
-```
-conda create -name CAVG python=3.7
-conda activate CAVG
+1. **Create Conda Environment**  
+   ```bash
+   conda create --name CAVG python=3.7
+   conda activate CAVG
 ```
 
-2.**Installing PyTorch**:
+2. **Install PyTorch with CUDA 11.7**  
 
- Install PyTorch and associated libraries compatible with CUDA 11.7:
+   ```bash
+   conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+   ```
 
-```
-conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
-```
+3. **Install Additional Requirements**  
 
-**Installing Additional Requirements**: 
-
-Complete the environment setup by installing the necessary packages from `requirements.txt`:
-
-```
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 
 
-## Talk2car Dataset
+## 📂 Talk2Car Dataset
 
-Experiments were conducted using the Talk2Car dataset. Should you utilize this dataset in your work, please ensure to cite the original paper.
+Experiments are conducted using the **Talk2Car** dataset. If you use this dataset, please cite the original paper:
 
-```
+```bibtex
 Thierry Deruyttere, Simon Vandenhende, Dusan Grujicic, Luc Van Gool, Marie-Francine Moens:
 Talk2Car: Taking Control of Your Self-Driving Car. EMNLP 2019
 ```
 
-#### Downloading the Dataset
+### Dataset Download Instructions
 
-1. Activate the CAVG environment and install `gdown` for downloading the dataset:
+1. **Activate Environment and Install `gdown`**  
 
-```
-conda activate CAVG
-pip install gdown
-```
+   ```bash
+   conda activate CAVG
+   pip install gdown
+   ```
 
-2.Download the Talk2Car images:
+2. **Download Talk2Car Images**  
 
-```
-gdown --id 1bhcdej7IFj5GqfvXGrHGPk2Knxe77pek
-```
+   ```bash
+   gdown --id 1bhcdej7IFj5GqfvXGrHGPk2Knxe77pek
+   ```
 
-3.Unzip and organize the images:
+3. **Organize Images**  
 
-```
-unzip imgs.zip && mv imgs/ ./data/images
-rm imgs.zip
-```
+   ```bash
+   unzip imgs.zip && mv imgs/ ./data/images
+   rm imgs.zip
+   ```
 
 
 
-## Train
+## 🏋️‍♂️ Training
 
-To begin training your CAVG model with the Talk2Car dataset, you can easily start with the provided script. Training is a crucial step to ensure your model accurately understands and processes the dataset.
+To start training the CAVG model with the Talk2Car dataset, run:
 
-Simply run the following command in your terminal:
-
-```
+```bash
 bash talk2car/script/train.sh 
 ```
 
 
 
-## Evaluation
+## 📊 Evaluation
 
-Execute the following command to start the evaluation process:
+To evaluate the model's performance, execute:
 
-```
+```bash
 bash talk2car/script/test.sh
 ```
 
 
 
-## Prediction
+## 🔍 Prediction
 
-The prediction phase in the Talk2Car dataset plays a critical role. It involves generating bounding boxes for each command as part of the object referral task. This step is vital for assessing the effectiveness of your model in understanding and responding to spatial queries within the dataset.
+During the prediction phase on the Talk2Car dataset, bounding boxes are generated to assess the model's spatial query understanding. To begin predictions, run:
 
-Execute the following command in your terminal to initiate the prediction process:
-
-```
+```bash
 bash talk2car/script/prediction.sh
 ```
 
 
-## Qualitative Results
-Comparative Visualization of Model Performance on the Talk2Car Dataset. Ground truth bounding boxes are depicted in blue, while output bounding boxes of CAVG are highlighted in red. A natural language command associated with each visual scenario is also displayed below the image for context.
+
+## 🎨 Qualitative Results
+
+**Performance Comparison**  
+Ground truth bounding boxes are in blue, while CAVG output boxes are in red. Commands associated with each scenario are displayed for context.
 ![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/talk2car(1)%20(2).png)
 
-Comparative Visualization of Model Performance on Challenging Scenes. The challenging scenes include those with limited visibility, ambiguous commands, and scenes with multiple agents. Ground truth bounding boxes are depicted in blue, while output bounding boxes of CAVG are highlighted in red. A natural language command associated with each visual scenario is also displayed below the image for context.
+**Challenging Scenes**  
+Examples from scenes with limited visibility, ambiguous commands, and multiple agents.
+
 ![image](https://github.com/Petrichor625/Talk2car_CAVG/blob/main/Figure/carner_case_03.png)
 
 
-## Leadboard
-One can find the current Talk2Car leaderboard here. The models on Talk2Car are evaluated by checking if the Intersection over Union of the predicted object bounding box and the ground truth bounding box is above 0.5.
-This metric can be referred to in many ways i.e. IoU<sub>0.5</sub>, AP50.
-Pull requests with new results and models are always welcome!
+## 🏆 Leaderboard
 
-<div align="center">
+Models on Talk2Car are evaluated by Intersection over Union (IoU) of predicted and ground truth bounding boxes with a threshold of 0.5 (AP50). We welcome pull requests with new results!
 
-| Model  | AP50 / IoU<sub>0.5</sub> | Code |
-|:---:|:---:|:---:|
-| [STACK-NMN](https://arxiv.org/pdf/1807.08556.pdf)  | 33.71  | |
-| [SCRC](https://arxiv.org/abs/1511.04164)  | 38.7  | |
-| [OSM](https://arxiv.org/pdf/1406.5679.pdf)  | 35.31  | | 
-| [Bi-Directional retr.](https://arxiv.org/abs/2004.13822)  | 44.1  | | 
-| [MAC](https://arxiv.org/abs/1803.03067)  |  50.51 | | 
-| [MSRR](https://arxiv.org/abs/2003.08717) | 60.04 | |
-| [VL-Bert (Base)](https://arxiv.org/abs/1908.08530)| 63.1 | [Code](https://github.com/ThierryDeruyttere/VL-BERT-Talk2Car) |
-| [AttnGrounder](https://arxiv.org/abs/2009.05684) | 63.3 |[Code](https://github.com/i-m-vivek/AttnGrounder) |
-| [ASSMR](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_5) | 66.0 | |
-| [CMSVG](https://arxiv.org/abs/2009.06066) | 68.6 | [Code](https://github.com/niveditarufus/CMSVG) |
-| [Vilbert (Base)](https://arxiv.org/abs/1908.02265) | 68.9| [Code](https://github.com/ThierryDeruyttere/vilbert-Talk2car) |
-| [CMRT](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_3) | 69.1 | |
-| [Sentence-BERT+FCOS3D](https://www.aaai.org/AAAI22Papers/AAAI-8858.GrujicicD.pdf) | 70.1 | |
-| [Stacked VLBert](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_2) | 71.0 | |
-| [FA](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9961196) | 73.51 |
-| **CAVG (Ours)** | 74.55 | [Code](https://github.com/Petrichor625/Talk2car_CAVG) |
-Additional details about some of the baselines and state-of-the-art models mentioned in the leaderboard are also analyzed in the C4AV challenge summary paper found [here](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_1).
+| Model                                                        | AP50 (IoU<sub>0.5</sub>) | Code                                                         |
+| ------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------ |
+| [STACK-NMN](https://arxiv.org/pdf/1807.08556.pdf)            | 33.71                    |                                                              |
+| [SCRC](https://arxiv.org/abs/1511.04164)                     | 38.7                     |                                                              |
+| [OSM](https://arxiv.org/pdf/1406.5679.pdf)                   | 35.31                    |                                                              |
+| [Bi-Directional retr.](https://arxiv.org/abs/2004.13822)     | 44.1                     |                                                              |
+| [MAC](https://arxiv.org/abs/1803.03067)                      | 50.51                    |                                                              |
+| [MSRR](https://arxiv.org/abs/2003.08717)                     | 60.04                    |                                                              |
+| [VL-Bert (Base)](https://arxiv.org/abs/1908.08530)           | 63.1                     | [Code](https://github.com/ThierryDeruyttere/VL-BERT-Talk2Car) |
+| [AttnGrounder](https://arxiv.org/abs/2009.05684)             | 63.3                     | [Code](https://github.com/i-m-vivek/AttnGrounder)            |
+| [ASSMR](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_5) | 66.0                     |                                                              |
+| [CMSVG](https://arxiv.org/abs/2009.06066)                    | 68.6                     | [Code](https://github.com/niveditarufus/CMSVG)               |
+| [Vilbert (Base)](https://arxiv.org/abs/1908.02265)           | 68.9                     | [Code](https://github.com/ThierryDeruyttere/vilbert-Talk2car) |
+| [CMRT](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_3) | 69.1                     |                                                              |
+| [Sentence-BERT+FCOS3D](https://www.aaai.org/AAAI22Papers/AAAI-8858.GrujicicD.pdf) | 70.1                     |                                                              |
+| [Stacked VLBert](https://link.springer.com/chapter/10.1007/978-3-030-66096-3_2) | 71.0                     |                                                              |
+| [FA](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9961196) | 73.51                    |                                                              |
+| **CAVG (Ours)**                                              | 74.55                    | [Code](https://github.com/Petrichor625/Talk2car_CAVG)        |
 
-</div>
+You can find the full Talk2Car leaderboard [here](https://github.com/talk2car/Talk2Car/blob/master/leaderboard.md).
 
-Here is where you can find the [leaderboard](https://github.com/talk2car/Talk2Car/blob/master/leaderboard.md) for the Talk2Car.
+---
 
+## 📑 Citation
 
+If you find our work useful, please consider citing:
 
-## Citation
+``
 **BibTex**
-```
 @article{LIAO2024100116,
 title = {GPT-4 enhanced multimodal grounding for autonomous driving: Leveraging cross-modal attention with large language models},
 journal = {Communications in Transportation Research},
@@ -188,10 +196,18 @@ volume = {4},
 pages = {100116},
 year = {2024},
 issn = {2772-4247},
-doi = {https://doi.org/10.1016/j.commtr.2023.100116},
+doi = {https://doi.org/10.1016/j.comm
+
+tr.2023.100116},
 url = {https://www.sciencedirect.com/science/article/pii/S2772424723000276},
 author = {Haicheng Liao and Huanming Shen and Zhenning Li and Chengyue Wang and Guofa Li and Yiming Bie and Chengzhong Xu},
 keywords = {Autonomous driving, Visual grounding, Cross-modal attention, Large language models, Human-machine interaction}
 }
 ```
 GPT-4 Enhanced Multimodal Grounding for Autonomous Driving: Leveraging Cross-Modal Attention with Large Language Models accepted by the journal _Communications in Transportation Research_.
+Thank you for exploring CAVG! Your support and feedback are highly appreciated.
+
+
+
+
+
