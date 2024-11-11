@@ -74,7 +74,7 @@ Navigating complex commands in a visual context is a core challenge for autonomo
    ```bash
    conda create --name CAVG python=3.7
    conda activate CAVG
-```
+   ```
 
 2. **Install PyTorch with CUDA 11.7**  
 
